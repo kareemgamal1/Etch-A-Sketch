@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etch A Sketch</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/all.min.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+    </head>
+
+    <body>
+
+        <div class="main-game">
+            <h2>Etch A Sketch</h2>
+            <div class="controls">
+                <div class="new">
+                    <input type="button" id="reset">
+                </div>
+                <div class="slider">
+                    <p id="gridValue">32</p>
+                    <input type="range" min="4" max="60" value="30" class="slider" step="4"
+                        id="gridRange">
+                </div>
+                <div class="color">
+                    <input type="color" id="color">
+                    <div class="info">
+                        <h1>Input</h1>
+                        <h2>Color</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container"> </div>
+        </div>
+        <footer class="footer">
+            <p>
+                Copyright ©
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                kareemgamaal
+                <a href="https://github.com/kareemgamal1" target="_blank"><i
+                        class="fab fa-github"></i></a>
+            </p>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+
+</html>
