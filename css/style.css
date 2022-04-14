@@ -6,58 +6,30 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
 }
 body {
   background-image: url(https://i.pinimg.com/564x/9d/d4/a7/9dd4a7590f997711cfc9aebabac92df1.jpg);
 }
-.main-game {
+
+h2:first-child {
+  font-size: 2em;
+  text-align: center;
+}
+.main {
   display: flex;
+  justify-content: center;
+  gap: 1%;
 }
-.main-game > h2 {
-  margin: 0 auto;
-  padding: 5%;
-  font-size: 30px;
-}
-.main-game .controls {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-.main-game .controls .new #reset {
-  width: 50%;
-}
-.main-game .controls .slider {
-}
-.container {
-  display: grid;
-  background-color: white;
-  grid-template-rows: repeat(var(--grid-rows), 1fr);
-  grid-template-columns: repeat(var(--grid-cols), 1fr);
-  width: 40%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.6);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+/* Controls  */
+.controls {
+  display: flex;
+  flex-direction: column;
+  top: 13.8%;
+  left: 21%;
 }
 
-.grid-item {
-  padding: 50%;
-}
+/* Color */
 
-.colored {
-  background-color: var(--color);
-}
 .color {
   background: white;
   box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.1);
@@ -92,15 +64,170 @@ input[type="color"] {
   width: 10em;
   height: 8em;
 }
+.colorModes {
+  display: flex;
+  flex-direction: column;
+}
+.sliderContainer {
+  background-color: #eeeeee9a;
+  padding: 5%;
+  margin: 10% 0%;
+  align-items: center;
+  border-radius: 10%;
+  width: 100%;
+}
+.sliderContainer input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  outline: none;
+}
+.sliderContainer input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border: 2px solid black;
+  border-radius: 50%;
+  outline: none;
+}
+.sliderContainer input::-webkit-slider-thumb:hover {
+  background-color: black;
+}
+.sliderContainer .value {
+  color: black;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 5% 5% 0% 0%;
+}
+.new input {
+  width: 100%;
+}
+
+/* Color mode */
+.modes {
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.modes .title {
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+.modes .mode input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.modes .mode {
+  cursor: pointer;
+  width: 48.5%;
+}
+
+.modes .mode .mode-content {
+  display: flex;
+  border: 2px solid #e1e2e7;
+  border-radius: 10px;
+  transition: box-shadow 0.4s;
+  position: relative;
+}
+#coloring {
+  /* it's opacity is 0 when it's not checked */
+  width: 25%;
+  height: 50%;
+  bottom: 0;
+  position: absolute;
+}
+
+.modes .mode .mode-content img,
+.mode-content input {
+  margin-right: 30px;
+  height: 50px;
+  width: 70px;
+}
+
+.modes .mode .mode-details span {
+  margin-bottom: 10px;
+  display: block;
+  font-size: 20px;
+  line-height: 24px;
+  color: #252f42;
+}
+
+.modes .mode .mode-details div {
+  font-size: 20px;
+  line-height: 18px;
+  padding-right: 15px;
+  padding-top: 1px;
+}
+
+.modes .mode .mode-content:hover {
+  box-shadow: 0px 3px 5px 0px #e8e8e8;
+}
+
+.modes .mode input[type="radio"]:checked + .mode-content:after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background: #216fe0;
+  right: 20px;
+  top: 20px;
+  border-radius: 100%;
+  border: 3px solid #fff;
+  box-shadow: 0px 0px 0px 2px #0066ff;
+}
+
+.modes .mode input[type="radio"]:checked + .mode-content {
+  border: 2px solid #216ee0;
+  background: #eaf1fe;
+  transition: ease-in 0.3s;
+}
+/* Color mode */
+
+.grid-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% 0%;
+  background-color: #eee;
+  border: 1px solid black;
+}
+/* Container and items */
+
+.container {
+  display: grid;
+  background-color: white;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  width: 40%;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.6);
+}
+.grid-item {
+  padding: 50%;
+  transition: 0.13s;
+  outline: 1px solid black;
+}
+
+.colored {
+  background-color: var(--color);
+}
+
+/* Footer */
 .footer {
   display: flex;
   position: absolute;
   bottom: 0;
   left: 0;
-  display: flex;
   justify-content: center;
   width: 100%;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 .footer p {
   width: fit-content;

@@ -12,24 +12,59 @@
     </head>
 
     <body>
-
-        <div class="main-game">
-            <h2>Etch A Sketch</h2>
+        <h2>Etch A Sketch</h2>
+        <div class="main">
             <div class="controls">
-                <div class="new">
-                    <input type="button" id="reset">
+                <div class="modes">
+                    <div class="title">Choose color mode</div>
+                    <label class="mode color-mode" for="color">
+                        <input checked type="radio" name="plan" id="color" />
+                        <div class="mode-content">
+                            <img loading="lazy" src="/assets/paintbrush.png">
+                            <div class="mode-details">
+                                <input type="color" id="coloring">
+                                <div>Color
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="mode rainbow-mode" for="rainbow">
+                        <input type="radio" name="plan" id="rainbow" />
+                        <div class="mode-content">
+                            <img loading="lazy" src="/assets/pngegg.png" alt="" />
+                            <div class="mode-details">
+                                <div>Rainbow</div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="mode eraser-mode" for="erase">
+                        <input type="radio" name="plan" id="erase" />
+                        <div class="mode-content">
+                            <img loading="lazy" src="/assets/eraser.png" alt="" />
+                            <div class="mode-details">
+                                <div>Erase</div>
+                            </div>
+                        </div>
+                    </label>
+
                 </div>
-                <div class="slider">
-                    <p id="gridValue">32</p>
-                    <input type="range" min="4" max="60" value="30" class="slider" step="4"
+                <div class="sliderContainer">
+                    <input type="range" min="4" max="64" value="30" class="slider" step="4"
                         id="gridRange">
-                </div>
-                <div class="color">
-                    <input type="color" id="color">
-                    <div class="info">
-                        <h1>Input</h1>
-                        <h2>Color</h2>
+                    <div class="value">
+                        <div id="gridValue1">16</div>
+                        <div>x</div>
+                        <div id="gridValue2">16</div>
                     </div>
+                </div>
+                <div class="new">
+                    <input type="button" id="reset" value="Create grid">
+                </div>
+                <div class="grid-lines">
+                    <label for="hide">Show grid lines</label>
+                    <input type="checkbox" id="hide" checked>
                 </div>
             </div>
             <div class="container"> </div>
