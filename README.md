@@ -4,7 +4,7 @@ Practicing DOM on this simple web app that allows you to create pixel art from s
 although called Etch-a-Sketch it functions more like a paint grid, you can choose a color and paint each cell in the grid by hovering over it. The same gesture with the erase and RGB color generation functionalities, in addition to other featuers that will be implemented later on.
 
 ---
-You can try it out [here](https://dead-locke.github.io/etch-a-sketch/)
+You can try it out [here](https://kareemgamal1.github.io/Etch-A-Sketch/)
 ___
 
 
