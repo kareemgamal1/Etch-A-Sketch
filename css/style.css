@@ -5,6 +5,7 @@
 }
 * {
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
   background-image: url(https://i.pinimg.com/564x/9d/d4/a7/9dd4a7590f997711cfc9aebabac92df1.jpg);
