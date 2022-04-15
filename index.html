@@ -58,13 +58,24 @@
                         <div>x</div>
                         <div id="gridValue2">16</div>
                     </div>
+                    <div class="new">
+                        <input type="button" id="reset" value="Create grid">
+                    </div>
                 </div>
-                <div class="new">
-                    <input type="button" id="reset" value="Create grid">
-                </div>
+
                 <div class="grid-lines">
-                    <label for="hide">Show grid lines</label>
-                    <input type="checkbox" id="hide" checked>
+                    <label for="gridLines" class="checkbox">
+                        <input id="gridLines" name="checkbox-group" type="checkbox" checked>
+                        <span class="checkbox__mark">
+                            <svg width="25" height="18" viewBox="0 0 25 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M9.13449 12.7269L22.2809 0L25 2.64085L9.13449 18L0 9.15702L2.71912 6.51624L9.13449 12.7269Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                        Show grid-lines
+                    </label>
                 </div>
             </div>
             <div class="container"> </div>
